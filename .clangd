@@ -1,0 +1,5 @@
+CompileFlags:
+  Remove: [-fabi*, -forward*, --generate*]
+Diagnostics:
+  UnusedIncludes: Strict
+  MissingIncludes: Strict

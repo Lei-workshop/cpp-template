@@ -1,0 +1,38 @@
+---
+Language: Cpp
+BasedOnStyle: Google
+BreakAfterAttributes: Leave
+CommentPragmas: '^ (IWYU pragma:|NOLINT(BEGIN|END|NEXTLINE)?(\(.+\))?:? )'
+DerivePointerAlignment: false
+InsertNewlineAtEOF: true
+IncludeCategories:
+  - Regex:         '^<(cuda|(driver|vector)_(types|functions)).*'
+    Priority:      40
+    CaseSensitive: false
+  - Regex:         '^<(mpi).*'
+    Priority:      50
+    CaseSensitive: false
+  - Regex:         '^<(nccl).*'
+    Priority:      55
+    CaseSensitive: false
+  - Regex:         '^<(gsl/).*'
+    Priority:      70
+    CaseSensitive: false
+  - Regex:         '^<(fmt/).*'
+    Priority:      71
+    CaseSensitive: false
+  - Regex:         '^<(spdlog).*'
+    Priority:      72
+    CaseSensitive: false
+  - Regex:         '^<(argparse).*'
+    Priority:      73
+    CaseSensitive: false
+  - Regex:         '^<.*\.h>$'
+    Priority:      20
+    CaseSensitive: false
+  - Regex:         '^<.*'
+    Priority:      30
+    CaseSensitive: false
+  - Regex:         '.*'
+    Priority:      100
+    CaseSensitive: false
