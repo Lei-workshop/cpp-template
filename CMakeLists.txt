@@ -8,4 +8,11 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_subdirectory(third_party)
 
 add_executable(hello main.cpp)
-target_link_libraries(hello argparse::argparse spdlog::spdlog cpptrace_th::static)
+target_link_libraries(
+  hello
+  gsl::gsl-lite-v1
+  fmt::fmt
+  range-v3::range-v3
+  spdlog::spdlog
+  argparse::argparse
+  cpptrace_th::static)
