@@ -24,8 +24,11 @@ IncludeCategories:
   - Regex:         '^<(spdlog).*'
     Priority:      72
     CaseSensitive: false
-  - Regex:         '^<(argparse).*'
+  - Regex:         '^<(range/v3).*'
     Priority:      73
+    CaseSensitive: false
+  - Regex:         '^<(argparse).*'
+    Priority:      74
     CaseSensitive: false
   - Regex:         '^<.*\.h>$'
     Priority:      20
